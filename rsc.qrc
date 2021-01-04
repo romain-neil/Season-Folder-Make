@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="folder-open">ark-open.png</file>
+    </qresource>
+</RCC>
