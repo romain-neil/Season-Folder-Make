@@ -1,31 +1,8 @@
 #include <QtWidgets>
 
-/*
-#include <QDialog>
-#include <QFile>
-#include <QGridLayout>
-#include <QGroupBox>
-#include <QInputDialog>
-#include <QKeySequence>
-#include <QLineEdit>
-#include <QMenuBar>
-#include <QMainWindow>
-#include <QPalette>
-#include <QPushButton>
-#include <QSpinBox>
-#include <QTableWidget>
-#include <QTableWidgetItem>
-#include <QTreeView>
-#include <QFileInfo>
-#include <QMap>
-#include <QProgressBar>
-#include <QVector>
-*/
-
 #include "fenprincipale.h"
 #include "core.h"
 #include "aboutdialog.h"
-
 
 FenPrincipale::FenPrincipale() {
     widget = new QWidget();
@@ -73,10 +50,6 @@ FenPrincipale::FenPrincipale() {
     recap->addWidget(tableWidget, 0, 0);
     listeGr->setLayout(recap);
 
-    //pBar = new QProgressBar(this);
-    //pBar->setRange(0, 100);
-    //pBar->setValue(0);
-
     startBtn = new QPushButton(tr("Run", "Run the process"));
 
     layout = new QGridLayout;
@@ -122,12 +95,6 @@ void FenPrincipale::createActions() {
     actSetPrefix = new QAction(tr("Set the prefixe"));
     connect(actSetPrefix, &QAction::triggered, this, &FenPrincipale::mSetPrefix);
 
-    //actEditStatsSetting = new QAction(tr("Données de statistiques"));
-    //connect(actEditStatsSetting, SIGNAL(triggered()), this, SLOT(mAnaliticData()));
-
-	m_actionChangeLang = new QAction(tr("Change the langage"));
-	//connect(m_actionChangeLang, SIGNAL(triggered()), this, SLOT(mChangeLangageDialog)); //TODO: implement langage menu selection (like at https://wiki.qt.io/How_to_create_a_multi_language_application)
-
     actAbout = new QAction(tr("About"), this);
     connect(actAbout, &QAction::triggered, this, &FenPrincipale::mAboutPopup);
 
@@ -145,8 +112,6 @@ void FenPrincipale::createMenus() {
 
     menuSettings = menuBar()->addMenu(tr("Settings"));
     menuSettings->addAction(actSetPrefix);
-    //menuSettings->addAction(actEditStatsSetting);
-	//menuSettings->addAction(m_actionChangeLang); //TODO: Langage menu selection
 
     menuHelp = menuBar()->addMenu(tr("Help"));
     menuHelp->addAction(actAbout);
@@ -205,7 +170,6 @@ void FenPrincipale::mCheckForUpdates() {
 }
 
 void FenPrincipale::mShowSuccess() {
-
 	startBtn->setDisabled(false);
 
 	QMessageBox::information(this, tr("Success"), tr("All files have been processed!"));
@@ -228,8 +192,6 @@ void FenPrincipale::mRun() {
     QDir d;
 
     startBtn->setDisabled(true);
-
-    //pBar->setMaximum(this->totalItems);
 
 	if(this->liste.empty()) {
 		QMessageBox::critical(this, tr("Erreur"), tr("La liste est vide !"));

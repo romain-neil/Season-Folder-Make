@@ -75,7 +75,7 @@ class FenPrincipale : public QMainWindow {
         void mShowSuccess();
 
 		/**
-		 * @brief Fonction called when update verification is done
+		 * @brief Function called when update verification is done
 		 * @author Romain Neil
 		 * @since 2.5.0
 		 */
