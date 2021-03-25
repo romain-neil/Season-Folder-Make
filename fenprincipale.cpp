@@ -4,7 +4,6 @@
 #include "core.h"
 #include "aboutdialog.h"
 
-
 FenPrincipale::FenPrincipale() {
     widget = new QWidget();
     c = new Core();
@@ -100,10 +99,7 @@ void FenPrincipale::createActions() {
     actSetPrefix = new QAction(tr("Set the prefixe"));
     connect(actSetPrefix, &QAction::triggered, this, &FenPrincipale::mSetPrefix);
 
-    //actEditStatsSetting = new QAction(tr("Données de statistiques"));
-    //connect(actEditStatsSetting, SIGNAL(triggered()), this, SLOT(mAnaliticData()));
-
-	m_actionChangeLang = new QAction(tr("Change the langage"));
+	//m_actionChangeLang = new QAction(tr("Change the langage"));
 	//connect(m_actionChangeLang, SIGNAL(triggered()), this, SLOT(mChangeLangageDialog)); //TODO: implement langage menu selection (like at https://wiki.qt.io/How_to_create_a_multi_language_application)
 
     actAbout = new QAction(tr("About"), this);
@@ -225,7 +221,7 @@ void FenPrincipale::mRun() {
 
 		this->listeItems.clear();
 
-		tableWidget->clearContents(); //TODO: verify that function works as expected
+		tableWidget->setRowCount(0);
 		liste.clear();
 	}
 }
