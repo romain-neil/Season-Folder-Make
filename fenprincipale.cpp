@@ -88,10 +88,10 @@ FenPrincipale::FenPrincipale() {
 
     /* Liste des connect */
 
-    connect(folder, SIGNAL(textEdited(const QString&)), this, SLOT(mVerifyDir(const QString&)));
-    connect(selectFolder, SIGNAL(clicked()), this, SLOT(mSelectFolder()));
-    connect(addSelectedFolder, SIGNAL(clicked()), this, SLOT(mAddFolder()));
-    connect(startBtn, SIGNAL(clicked()), this, SLOT(mRun()));
+    connect(folder, &QLineEdit::textEdited, this, &FenPrincipale::mVerifyDir);
+    connect(selectFolder, &QPushButton::clicked, this, &FenPrincipale::mSelectFolder);
+    connect(addSelectedFolder, &QPushButton::clicked, this, &FenPrincipale::mAddFolder);
+    connect(startBtn, &QPushButton::clicked, this, &FenPrincipale::mRun);
 
     setWindowIcon(QIcon(":/images/folder-open"));
     setWindowTitle(qApp->applicationName());
@@ -117,10 +117,10 @@ FenPrincipale::FenPrincipale() {
 void FenPrincipale::createActions() {
     actQuitter = new QAction(tr("Exit"), this);
     actQuitter->setShortcut(QKeySequence("Ctrl+q"));
-    connect(actQuitter, SIGNAL(triggered()), this, SLOT(close()));
+    connect(actQuitter, &QAction::triggered, this, &FenPrincipale::close);
 
     actSetPrefix = new QAction(tr("Set the prefixe"));
-    connect(actSetPrefix, SIGNAL(triggered()), this, SLOT(mSetPrefix()));
+    connect(actSetPrefix, &QAction::triggered, this, &FenPrincipale::mSetPrefix);
 
     //actEditStatsSetting = new QAction(tr("Données de statistiques"));
     //connect(actEditStatsSetting, SIGNAL(triggered()), this, SLOT(mAnaliticData()));
@@ -129,14 +129,14 @@ void FenPrincipale::createActions() {
 	//connect(m_actionChangeLang, SIGNAL(triggered()), this, SLOT(mChangeLangageDialog)); //TODO: implement langage menu selection (like at https://wiki.qt.io/How_to_create_a_multi_language_application)
 
     actAbout = new QAction(tr("About"), this);
-    connect(actAbout, SIGNAL(triggered()), this, SLOT(mAboutPopup()));
+    connect(actAbout, &QAction::triggered, this, &FenPrincipale::mAboutPopup);
 
     actVerifyUpdate = new QAction(tr("Vérifier les mises à jour"), this);
     actVerifyUpdate->setShortcut(QKeySequence("Ctrl+u"));
-    connect(actVerifyUpdate, SIGNAL(triggered()), this, SLOT(mCheckForUpdates()));
+    connect(actVerifyUpdate, &QAction::triggered, this, &FenPrincipale::mCheckForUpdates);
 
     actAboutQt = new QAction(tr("About Qt"), this);
-    connect(actAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+    connect(actAboutQt, &QAction::triggered, qApp, &QApplication::aboutQt);
 }
 
 void FenPrincipale::createMenus() {
@@ -241,7 +241,7 @@ void FenPrincipale::mRun() {
 		folderCreationThread = new FolderCreateThread(this);
 		folderCreationThread->setParams(this->liste, d, prefix);
 
-		connect(folderCreationThread, SIGNAL(finished()), this, SLOT(mShowSuccess()));
+		connect(folderCreationThread, &FolderCreateThread::finished, this, &FenPrincipale::mShowSuccess);
 
 		folderCreationThread->start();
 
