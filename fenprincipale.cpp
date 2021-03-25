@@ -1,27 +1,5 @@
 #include <QtWidgets>
 
-/*
-#include <QDialog>
-#include <QFile>
-#include <QGridLayout>
-#include <QGroupBox>
-#include <QInputDialog>
-#include <QKeySequence>
-#include <QLineEdit>
-#include <QMenuBar>
-#include <QMainWindow>
-#include <QPalette>
-#include <QPushButton>
-#include <QSpinBox>
-#include <QTableWidget>
-#include <QTableWidgetItem>
-#include <QTreeView>
-#include <QFileInfo>
-#include <QMap>
-#include <QProgressBar>
-#include <QVector>
-*/
-
 #include "fenprincipale.h"
 #include "core.h"
 #include "aboutdialog.h"
