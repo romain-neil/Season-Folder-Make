@@ -158,8 +158,6 @@ class FenPrincipale : public QMainWindow {
         QPushButton *addSelectedFolder;
         QPushButton *startBtn;
 
-		//QProgressBar *pBar;
-
         QTableWidget *tableWidget{};
 
         QWidget *widget;

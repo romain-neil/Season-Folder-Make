@@ -55,7 +55,6 @@ FenPrincipale::FenPrincipale() {
     layout = new QGridLayout;
     layout->addWidget(folderSelectionGr, 0, 0);
     layout->addWidget(listeGr, 1, 0);
-    //layout->addWidget(pBar, 2, 0);
     layout->addWidget(startBtn, 2, 0);
     widget->setLayout(layout);
 
