@@ -20,7 +20,7 @@ jobs:
         matrix:
           os: [windows-latest]
           arch: [x64]
-          mode: [debug, releasedbg]
+          mode: [Debug, Release]
           
     runs-on: ${{ matrix.os }}
     if: "!contains(github.event.head_commit.message, 'ci skip')"
@@ -65,4 +65,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.mode }}
-        path: build
+        path: build/${{matrix.mode}}
