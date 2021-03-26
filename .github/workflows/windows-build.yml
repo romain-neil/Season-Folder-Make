@@ -1,0 +1,69 @@
+name: Windows-Build
+
+on:
+  pull_request:
+  push:
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+  QT_VERSION: '5.15.2'
+  CMAKE_GENERATOR: 'Visual Studio 16 2019'
+
+jobs:
+  build:
+    strategy:
+        matrix:
+          os: [windows-latest]
+          arch: [x64]
+          mode: [debug, releasedbg]
+          
+    runs-on: ${{ matrix.os }}
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Enable longpath in git for Windows
+      run: git config --system core.longpaths true
+      
+      # Install Qt
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ env.QT_VERSION }}
+
+    - name: Create Build Environment
+      # Some projects don't allow in-source building, so create a separate build directory
+      # We'll use this as our working directory for all subsequent commands
+      run: cmake -E make_directory ${{github.workspace}}/build
+
+    - name: Configure CMake
+      # Use a bash shell so we can use the same syntax for environment variable
+      # access regardless of the host operating system
+      shell: bash
+      working-directory: ${{github.workspace}}/build
+      # Note the current convention is to use the -S and -B options here to specify source 
+      # and build directories, but this is only available with CMake 3.13 and higher.  
+      # The CMake binaries on the Github Actions machines are (as of this writing) 3.12
+      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+
+    - name: Build
+      working-directory: ${{github.workspace}}/build
+      shell: bash
+      # Execute the build.  You can specify a specific target with "--target <NAME>"
+      run: cmake --build . --config $BUILD_TYPE
+
+    # Upload artifacts
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.mode }}
+        path: package
+      run: ctest -C $BUILD_TYPE
