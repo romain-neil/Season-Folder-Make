@@ -97,10 +97,6 @@ void FenPrincipale::createActions() {
     actAbout = new QAction(tr("About"), this);
     connect(actAbout, &QAction::triggered, this, &FenPrincipale::mAboutPopup);
 
-    actVerifyUpdate = new QAction(tr("Vérifier les mises à jour"), this);
-    actVerifyUpdate->setShortcut(QKeySequence("Ctrl+u"));
-    connect(actVerifyUpdate, &QAction::triggered, this, &FenPrincipale::mCheckForUpdates);
-
     actAboutQt = new QAction(tr("About Qt"), this);
     connect(actAboutQt, &QAction::triggered, qApp, &QApplication::aboutQt);
 }
@@ -114,9 +110,7 @@ void FenPrincipale::createMenus() {
 
     menuHelp = menuBar()->addMenu(tr("Help"));
     menuHelp->addAction(actAbout);
-    menuHelp->addAction(actVerifyUpdate);
     menuHelp->addAction(actAboutQt);
-    menuHelp->addAction(actVerifyUpdate);
 }
 
 void FenPrincipale::mSelectFolder() {
@@ -162,20 +156,10 @@ void FenPrincipale::mAboutPopup() {
     aboutDialog = new AboutDialog;
 }
 
-void FenPrincipale::mCheckForUpdates() {
-    //Check for updates here
-	verifyUpdateThread = new VerifyUpdateThread(this);
-	verifyUpdateThread->start();
-}
-
 void FenPrincipale::mShowSuccess() {
 	startBtn->setDisabled(false);
 
 	QMessageBox::information(this, tr("Success"), tr("All files have been processed!"));
-}
-
-void FenPrincipale::mUpdateFinished() {
-	QMessageBox::information(this, "Succès", "Vérification des mises à jour effectuée");
 }
 
 void FenPrincipale::mSetPrefix() {

@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) {
 #ifdef QT_DEBUG
     foreach (const QString &path, app.libraryPaths())
         qDebug() << path;
+    	qDebug() << __FILE__;
 
     qDebug() << "C++ standard: " << __cplusplus;
     qDebug() << "Locale : " << locale << ", translation path: " << appTranslationDir;

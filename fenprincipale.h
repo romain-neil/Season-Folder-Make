@@ -61,25 +61,11 @@ class FenPrincipale : public QMainWindow {
         void mAboutPopup();
 
         /**
-         * @brief mCheckForUpdates
-         * @author Romain Neil
-		 * @since 2.2.3
-         */
-        void mCheckForUpdates();
-
-        /**
          * @brief Show success message dialog
          * @author Romain Neil
          * @since 2.4.0
          */
         void mShowSuccess();
-
-		/**
-		 * @brief Function called when update verification is done
-		 * @author Romain Neil
-		 * @since 2.5.0
-		 */
-		void mUpdateFinished();
 
         /**
          * @brief Set the prefix to the user specified input
@@ -126,16 +112,11 @@ class FenPrincipale : public QMainWindow {
         int totalItems{};
 
         FolderCreateThread *folderCreationThread{};
-		VerifyUpdateThread *verifyUpdateThread{};
 
         QAction *actQuitter{};
         QAction *actAbout{};
 		QAction *actAboutQt{};
-		QAction *m_actionChangeLang{};
 		QAction *actSetPrefix{};
-		QAction *actVerifyUpdate{};
-
-        QDialog *diagAbout{};
 
         QGridLayout *fSelect;
         QGridLayout *layout;
