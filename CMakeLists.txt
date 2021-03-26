@@ -2,11 +2,13 @@ cmake_minimum_required(VERSION 3.17)
 project(SeasonFolderMake)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_PREFIX_PATH "O:/Qt/5.15.2/mingw81_64/lib/cmake")
+if (CMAKE_PREFIX_PATH)
+else()
+    set(CMAKE_PREFIX_PATH "C:/Qt/5.15.2/msvc2019_64/lib/cmake")
+endif()
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
-
 
 set(QT_VERSION 5)
 set(REQUIRED_LIBS Core Gui Widgets Network)
