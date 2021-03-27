@@ -14,7 +14,7 @@ set(QT_VERSION 5)
 set(REQUIRED_LIBS Core Gui Widgets Network)
 set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Network)
 
-add_executable(${PROJECT_NAME} main.cpp FenPrincipale.cpp FenPrincipale.h FolderCreateThread.cpp FolderCreateThread.h core.cpp core.h VerifyUpdateThread.cpp verifyupdatethread.h aboutdialog.cpp aboutdialog.h)
+add_executable(${PROJECT_NAME} main.cpp FenPrincipale.cpp FenPrincipale.h FolderCreateThread.cpp FolderCreateThread.h core.cpp core.h aboutdialog.cpp aboutdialog.h)
 
 if (NOT CMAKE_PREFIX_PATH)
     message(WARNING "CMAKE_PREFIX_PATH is not defined, you may need to set it "
