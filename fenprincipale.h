@@ -6,7 +6,6 @@
 
 #include <QMainWindow>
 #include "foldercreatethread.h"
-#include "verifyupdatethread.h"
 
 class QDialog;
 class QGridLayout;

@@ -19,8 +19,10 @@ void FolderCreateThread::setParams(QMap<int, QMap<int, QString>> &liste, QDir &d
 void FolderCreateThread::run() {
 	if(!l.empty()) {
 		const auto& m1 = l.toStdMap();
+
 		for(const auto& p1 : m1) {
 			const auto& m2 = p1.second.toStdMap();
+
 			for(const auto& p2 : m2) {
 				d.setPath(p2.second);
 				int nb = p2.first;
