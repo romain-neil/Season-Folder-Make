@@ -65,7 +65,6 @@ jobs:
       working-directory: ${{github.workspace}}/build
       shell: bash
       run: |
-        ${{env.Qt5_Dir}}/bin/qtenv2.bat
         ${{env.Qt5_Dir}}/bin/windeployqt --${{matrix.mode}} ./${{matrix.mode}} 
 
     # Upload artifacts
