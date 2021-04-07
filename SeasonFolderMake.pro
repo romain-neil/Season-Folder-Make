@@ -2,9 +2,8 @@ QT += widgets gui network
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
-TRANSLATIONS += $$PWD/translation/fr.ts \
-    $$PWD/translations/en.ts \
-    $$PWD/translations/es.ts
+TRANSLATIONS += $$PWD/translations/sfm_fr.ts \
+    $$PWD/translations/sfm_es.ts
 
 CONFIG += c++17
 

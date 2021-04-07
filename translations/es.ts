@@ -4,121 +4,127 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../aboutdialog.cpp" line="6"/>
-        <source>Version actuelle : </source>
+        <location filename="../aboutdialog.cpp" line="5"/>
+        <source>Current version : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="7"/>
-        <source>Season Folder Make software is under the GPLv3 license</source>
+        <location filename="../aboutdialog.cpp" line="6"/>
+        <source>Copyright Romain Neil - 2020</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>FenPrincipale</name>
     <message>
-        <location filename="../fenprincipale.cpp" line="38"/>
+        <location filename="../fenprincipale.cpp" line="17"/>
         <source>File selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="49"/>
+        <location filename="../fenprincipale.cpp" line="28"/>
         <source>Add folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="58"/>
+        <location filename="../fenprincipale.cpp" line="37"/>
         <source>Summary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="64"/>
+        <location filename="../fenprincipale.cpp" line="43"/>
         <source>Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="78"/>
+        <location filename="../fenprincipale.cpp" line="53"/>
         <source>Run</source>
         <comment>Run the process</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="111"/>
+        <location filename="../fenprincipale.cpp" line="85"/>
         <source>Welcome !</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="111"/>
+        <location filename="../fenprincipale.cpp" line="85"/>
         <source>The prefix has been automatically set to a default value. Good use of software</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="116"/>
+        <location filename="../fenprincipale.cpp" line="90"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="120"/>
+        <location filename="../fenprincipale.cpp" line="94"/>
         <source>Set the prefixe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="126"/>
+        <location filename="../fenprincipale.cpp" line="97"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="134"/>
+        <location filename="../fenprincipale.cpp" line="100"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="139"/>
+        <location filename="../fenprincipale.cpp" line="105"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="142"/>
+        <location filename="../fenprincipale.cpp" line="108"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="146"/>
+        <location filename="../fenprincipale.cpp" line="111"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="153"/>
+        <location filename="../fenprincipale.cpp" line="117"/>
         <source>Select a folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="182"/>
+        <location filename="../fenprincipale.cpp" line="146"/>
+        <location filename="../fenprincipale.cpp" line="180"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="182"/>
+        <location filename="../fenprincipale.cpp" line="146"/>
         <source>Unable to add the folder because it is invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="201"/>
+        <location filename="../fenprincipale.cpp" line="167"/>
         <source>Prefix enter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="201"/>
+        <location filename="../fenprincipale.cpp" line="167"/>
         <source>Without spaces at the end.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="220"/>
+        <location filename="../fenprincipale.cpp" line="180"/>
+        <source>The list is empty !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../fenprincipale.cpp" line="162"/>
         <source>Success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../fenprincipale.cpp" line="220"/>
+        <location filename="../fenprincipale.cpp" line="162"/>
         <source>All files have been processed!</source>
         <translation type="unfinished"></translation>
     </message>

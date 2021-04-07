@@ -4,104 +4,129 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <source>Version actuelle : </source>
-        <translation type="vanished">Current version : </translation>
+        <location filename="../aboutdialog.cpp" line="5"/>
+        <source>Current version : </source>
+        <translation>Version actuelle :</translation>
     </message>
     <message>
-        <source>Season Folder Make software is under the GPLv3 license</source>
-        <translation type="vanished">Le logiciel Season Folder Make est sous la license GPLv3</translation>
+        <location filename="../aboutdialog.cpp" line="6"/>
+        <source>Copyright Romain Neil - 2020</source>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>FenPrincipale</name>
     <message>
-        <source>Dossier</source>
-        <translation type="obsolete">Dossier</translation>
-    </message>
-    <message>
+        <location filename="../fenprincipale.cpp" line="17"/>
         <source>File selection</source>
-        <translation type="vanished">Sélection du dossier</translation>
+        <translation>Sélection de fichier</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="28"/>
         <source>Add folder</source>
-        <translation type="vanished">Ajouter le dossier</translation>
+        <translation>Ajouter un dossier</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="37"/>
         <source>Summary</source>
-        <translation type="vanished">Récapitulatif</translation>
+        <translation>Résumé</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="43"/>
         <source>Folder</source>
-        <translation type="vanished">Dossier</translation>
+        <translation>Dossier</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="53"/>
         <source>Run</source>
         <comment>Run the process</comment>
-        <translation type="vanished">Lancer</translation>
+        <translation>Lancer</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="85"/>
         <source>Welcome !</source>
-        <translation type="vanished">Bienvenue !</translation>
+        <translation>Bienvenue !</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="85"/>
         <source>The prefix has been automatically set to a default value. Good use of software</source>
-        <translation type="vanished">Le préfixe à été automatiquement mis à une valeur par défaut. Bonne utilisation du logiciel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="90"/>
         <source>Exit</source>
-        <translation type="vanished">Quitter</translation>
+        <translation>Quitter</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="94"/>
         <source>Set the prefixe</source>
-        <translation type="vanished">Régler le préfixe</translation>
+        <translation>Définir le préfixe</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="97"/>
         <source>About</source>
-        <translation type="vanished">A propos</translation>
+        <translation>A propos</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="100"/>
         <source>About Qt</source>
-        <translation type="vanished">A propos de Qt</translation>
+        <translation>A propos de Qt</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="105"/>
         <source>File</source>
-        <translation type="vanished">Fichier</translation>
+        <translation>Fichier</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="108"/>
         <source>Settings</source>
-        <translation type="vanished">Paramètres</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="111"/>
         <source>Help</source>
-        <translation type="vanished">Aide</translation>
+        <translation>Aide</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="117"/>
         <source>Select a folder</source>
-        <translation type="vanished">Sélectionner un dossier</translation>
+        <translation>Sélectionner un dossier</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="146"/>
+        <location filename="../fenprincipale.cpp" line="180"/>
         <source>Error</source>
-        <translation type="vanished">Erreur</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="146"/>
         <source>Unable to add the folder because it is invalid.</source>
-        <translation type="vanished">Impossible d&apos;ajouter le dossier car il n&apos;est pas valide.</translation>
+        <translation>Impossible d&apos;ajouter le dossier car il est invalide</translation>
     </message>
     <message>
-        <source>Prefix enter</source>
-        <translation type="vanished">Entrée du préfixe</translation>
-    </message>
-    <message>
-        <source>Without spaces at the end.</source>
-        <translation type="vanished">Sans espaces à la fin.</translation>
-    </message>
-    <message>
+        <location filename="../fenprincipale.cpp" line="162"/>
         <source>Success</source>
-        <translation type="vanished">Succès</translation>
+        <translation>Succès</translation>
     </message>
     <message>
+        <location filename="../fenprincipale.cpp" line="162"/>
         <source>All files have been processed!</source>
-        <translation type="vanished">Tous les dossiers ont été traités !</translation>
+        <translation>Tout les fichiers ont été traités !</translation>
+    </message>
+    <message>
+        <location filename="../fenprincipale.cpp" line="167"/>
+        <source>Prefix enter</source>
+        <translation>Entrée du préfix</translation>
+    </message>
+    <message>
+        <location filename="../fenprincipale.cpp" line="167"/>
+        <source>Without spaces at the end.</source>
+        <translation>Sans espaces à la fin</translation>
+    </message>
+    <message>
+        <location filename="../fenprincipale.cpp" line="180"/>
+        <source>The list is empty !</source>
+        <translation>La liste est vide !</translation>
     </message>
 </context>
 </TS>

@@ -177,7 +177,7 @@ void FenPrincipale::mRun() {
     startBtn->setDisabled(true);
 
 	if(this->liste.empty()) {
-		QMessageBox::critical(this, tr("Erreur"), tr("La liste est vide !"));
+		QMessageBox::critical(this, tr("Error"), tr("The list is empty !"));
 	} else {
 		c->process(this->liste, d);
 
