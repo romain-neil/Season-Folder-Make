@@ -45,7 +45,7 @@ if (WIN32)
     endforeach (QT_LIB)
 endif ()
 
-#set(TS_FILES ${CMAKE_CURRENT_SOURCE_DIR}/translations/fr.ts )
+#set(TS_FILES ${CMAKE_CURRENT_SOURCE_DIR}/translations/sfm_fr.ts )
 #file(GLOB_RECURSE TS_SOURCES "*.cpp" "*.h" "*.ui")
 #add_custom_target(translations)
 
