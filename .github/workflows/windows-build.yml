@@ -66,6 +66,13 @@ jobs:
       shell: bash
       run: |
         ${{env.Qt5_Dir}}/bin/windeployqt --${{matrix.mode}} ./${{matrix.mode}} 
+        
+    - name: Compile translations
+      working-directory: ${{github.workspace}}
+      shell: bash
+      run: |
+        ${{env.Qt5_Dir}}/bin/lrelease ./SeasonFolderMake.pro #First compile translations files
+        move .\translations\*.qm .\build\translations #Move compiled translations to final folder
 
     # Upload artifacts
     - uses: actions/upload-artifact@v2
