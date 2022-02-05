@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     QString appTranslationDir = QApplication::applicationDirPath() + "/translations/";
 
     QTranslator translator;
-    translator.load(QString("qt_") + locale, QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    translator.load(QString("qt_") + locale, QLibraryInfo::path(QLibraryInfo::TranslationsPath));
     QApplication::installTranslator(&translator);
 
     QTranslator appTranslator;

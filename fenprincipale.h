@@ -14,7 +14,6 @@ class QLineEdit;
 class QMenu;
 class QPalette;
 class QPushButton;
-class QStringList;
 class QSpinBox;
 class QTableWidget;
 class QTableWidgetItem;

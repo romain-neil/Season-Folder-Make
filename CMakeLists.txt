@@ -4,15 +4,15 @@ project(SeasonFolderMake)
 set(CMAKE_CXX_STANDARD 17)
 if (CMAKE_PREFIX_PATH)
 else()
-    set(CMAKE_PREFIX_PATH "O:/Qt/5.15.2/msvc2019_64/lib/cmake")
+    set(CMAKE_PREFIX_PATH "D:/Qt/6.2.1/msvc2019_64/lib/cmake")
 endif()
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(QT_VERSION 5)
+set(QT_VERSION 6)
 set(REQUIRED_LIBS Core Gui Widgets Network)
-set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Network)
+set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Network)
 
 add_executable(${PROJECT_NAME} main.cpp FenPrincipale.cpp FenPrincipale.h FolderCreateThread.cpp FolderCreateThread.h core.cpp core.h aboutdialog.cpp aboutdialog.h)
 
