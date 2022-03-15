@@ -30,7 +30,7 @@ void Core::process(QMap<int, QMap<int, QString>> &liste, QDir &dir) {
 
                 QString path;
 
-                for(int j = 1; std::islessequal(j, nb); j++) {
+                for(int j = 1; j <= nb; j++) {
                     path = dir.absolutePath() + "/" + prefix + " " + QString::number(j);
                     dir.mkpath(path);
                 }
