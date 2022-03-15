@@ -197,9 +197,9 @@ void FenPrincipale::mRun() {
 	}
 }
 
-void FenPrincipale::mVerifyDir(const QString &text) {
+void FenPrincipale::mVerifyDir(const QString &path) {
     QPalette pal = this->folder->palette();
-    if(!QDir(text).exists()) {
+    if(!QDir(path).exists()) {
         pal.setColor(QPalette::Text, Qt::red);
     } else {
         pal.setColor(QPalette::Text, Qt::black);

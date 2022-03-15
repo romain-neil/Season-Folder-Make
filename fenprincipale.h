@@ -81,11 +81,11 @@ class FenPrincipale : public QMainWindow {
 
         /**
          * @brief mVerifyDir
-         * @param url
+         * @param path
          * @author Romain Neil
 		 * @since 2.2.1
          */
-        void mVerifyDir(const QString &url);
+        void mVerifyDir(const QString &path);
 
     private:
 
