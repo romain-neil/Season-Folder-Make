@@ -19,7 +19,7 @@ bool Core::isFirstRun() const {
     return this->firstRun;
 }
 
-void Core::process(QMap<int, QMap<int, QString>> &liste, QDir &dir) {
+void Core::process(QMap<std::size_t, QMap<int, QString>> &liste, QDir &dir) {
     if(!liste.empty()) {
         const auto& m1 = liste.toStdMap();
         for(const auto& p1 : m1) {

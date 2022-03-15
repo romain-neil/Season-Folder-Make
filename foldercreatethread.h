@@ -13,7 +13,7 @@ class FolderCreateThread : public QThread {
 		explicit FolderCreateThread(QObject *parent = nullptr);
 		~FolderCreateThread() override;
 
-		void setParams(QMap<int, QMap<int, QString>> &liste, QDir &dir, QString &p);
+		void setParams(QMap<std::size_t, QMap<int, QString>> &liste, QDir &dir, QString &p);
 
 	protected:
 
@@ -21,7 +21,7 @@ class FolderCreateThread : public QThread {
 
 	private:
 
-		QMap<int, QMap<int, QString>> l;
+		QMap<std::size_t, QMap<int, QString>> l;
 		QDir d;
 		QString prefix;
 

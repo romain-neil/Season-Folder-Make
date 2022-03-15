@@ -105,7 +105,7 @@ class FenPrincipale : public QMainWindow {
 
         AboutDialog *aboutDialog{};
 
-        QMap<int, QMap<int, QString>> liste;
+        QMap<std::size_t, QMap<int, QString>> liste;
 
         int totalItems{};
 

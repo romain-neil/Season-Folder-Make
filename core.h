@@ -45,7 +45,7 @@ class Core : public QObject {
          * @param const QString &prefix
 		 * @since 2.2.0
          */
-        void process(QMap<int, QMap<int, QString>> &liste, QDir &dir);
+        void process(QMap<std::size_t, QMap<int, QString>> &liste, QDir &dir);
 
         /**
          * @brief Set first run to true

@@ -10,7 +10,7 @@ FolderCreateThread::~FolderCreateThread() {
 	wait();
 }
 
-void FolderCreateThread::setParams(QMap<int, QMap<int, QString>> &liste, QDir &dir, QString &p) {
+void FolderCreateThread::setParams(QMap<std::size_t, QMap<int, QString>> &liste, QDir &dir, QString &p) {
 	l = liste;
 	d = dir;
 	prefix = p;
